@@ -29,11 +29,5 @@ public class EmployeeRepositoryServiceImpl implements IEmployeeRepositoryService
 	public Employee addEmployees(Employee employee) {
 		return employeeRepository.save(employee);
 	}
-
-	@Override
-	public String deleteEmployee(Employee emp) {
-		employeeRepository.delete(emp);
-		return "deleted";
-	}
 	
 }
