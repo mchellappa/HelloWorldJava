@@ -7,12 +7,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.jh.example.springboot.validation.CustomNameValidation;
+
 @Entity
 @Table(name = "employees")
 public class Employee {
 
     private long id;
+    @CustomNameValidation
     private String firstName;
+    @CustomNameValidation
     private String lastName;
     private String emailId;
 
